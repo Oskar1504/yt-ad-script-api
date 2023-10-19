@@ -28,3 +28,53 @@ this API is based upon express.js. it fetches youtube html page checks for certa
 - http://localhost:42012/getTrackedIds
     - return all tracked ids 
 
+## API returns
+/
+```json
+{
+	"status": 200,
+	"msg": "hey i am alive"
+}
+```
+/getScriptId
+```json
+{
+	"status": 200,
+	"foundElements": [
+		{
+			"id": 0,
+			"selector": "script#base-js",
+			"scriptSrc": "https://www.youtube.com/s/desktop/7a13cbe7/jsbin/desktop_polymer_enable_wil_icons.vflset/desktop_polymer_enable_wil_icons.js",
+			"scriptId": "7a13cbe7",
+			"timestamp": 1697713675298
+		},
+		{
+			"id": 1,
+			"selector": "script[src*='desktop_polymer_enable_wil_icons']",
+			"scriptSrc": "https://www.youtube.com/s/desktop/7a13cbe7/jsbin/desktop_polymer_enable_wil_icons.vflset/desktop_polymer_enable_wil_icons.js",
+			"scriptId": "7a13cbe7",
+			"timestamp": 1697713675299
+		}
+	],
+	"scriptIds": [
+		"7a13cbe7",
+		"7a13cbe7"
+	],
+	"fetchTimestamp": 1697713675299
+}
+```
+/getTrackedIds
+```json
+{
+	"status": 200,
+	"trackedIds": [
+		{
+			"id": 0,
+			"selector": "script#base-js",
+			"scriptSrc": "https://www.youtube.com/s/desktop/7a13cbe2/jsbin/desktop_polymer_enable_wil_icons.vflset/desktop_polymer_enable_wil_icons.js",
+			"scriptId": "7a13cbe7",
+			"timestamp": 1697713675298
+		}
+	]
+}
+```
