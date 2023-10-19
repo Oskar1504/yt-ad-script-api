@@ -1,0 +1,4 @@
+[
+    "script#base-js",
+    "script[src*='desktop_polymer_enable_wil_icons']"
+]
